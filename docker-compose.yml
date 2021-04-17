@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  recoll:
+    build: recoll
+    environment:
+      - WEBPORT=8080
+    volumes:
+      - /opt/test:/data
+      - ./recoll-data/:/root/.recoll/
+    ports:
+      - 127.0.0.1:8080:8080
+
